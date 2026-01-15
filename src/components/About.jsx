@@ -1,10 +1,10 @@
-import interiorImg from "../assets/interior_living_room_1768307277227.png";
+import interiorImg from "../assets/house5.png";
 
 export default function About() {
   const styles = {
     section: {
       padding: "var(--spacing-xl) 0",
-      backgroundColor: "var(--color-surface)", // Slightly lighter bg for contrast
+      backgroundColor: "var(--color-surface)",
     },
     grid: {
       display: "grid",

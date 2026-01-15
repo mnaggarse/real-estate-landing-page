@@ -1,6 +1,6 @@
-import aptImg from "../assets/listing_apartment_1768307242077.png";
-import cottageImg from "../assets/listing_cottage_1768307259789.jpg";
-import villaImg from "../assets/listing_villa_1768307223032.png";
+import aptImg from "../assets/house2.png";
+import cottageImg from "../assets/house3.png";
+import villaImg from "../assets/house4.png";
 
 export default function Listings() {
   const listings = [

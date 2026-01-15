@@ -1,7 +1,7 @@
 export default function Footer() {
   const styles = {
     footer: {
-      backgroundColor: "#020617", // Very dark slate
+      backgroundColor: "#020617",
       padding: "4rem 0 2rem",
       color: "var(--color-text-muted)",
       borderTop: "1px solid #1e293b",
@@ -46,7 +46,7 @@ export default function Footer() {
                 fontSize: "1.5rem",
               }}
             >
-              LUXE ESTATE
+              REAL ESTATE
             </h3>
             <p style={{ maxWidth: "300px" }}>
               Elevating the standard of luxury real estate with unmatched
@@ -83,7 +83,7 @@ export default function Footer() {
           <div>
             <h4 style={styles.colTitle}>Contact</h4>
             <ul style={styles.linkList}>
-              <li>info@luxeestate.com</li>
+              <li>info@realestate.com</li>
               <li>+1 (555) 123-4567</li>
               <li>
                 90210 Beverly Hills,
@@ -117,7 +117,7 @@ export default function Footer() {
         </div>
 
         <div style={styles.bottom}>
-          &copy; {new Date().getFullYear()} Luxe Estate. All rights reserved.
+          &copy; {new Date().getFullYear()} Real Estate. All rights reserved.
         </div>
       </div>
     </footer>

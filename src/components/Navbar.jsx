@@ -51,7 +51,7 @@ export default function Navbar() {
     <nav style={styles.nav} className={scrolled ? "glass" : ""}>
       <div className="container" style={styles.container}>
         <a href="#" style={styles.logo}>
-          LUXE ESTATE
+          REAL ESTATE
         </a>
         <ul style={styles.links}>
           <li>
