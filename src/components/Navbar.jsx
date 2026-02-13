@@ -11,66 +11,48 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const styles = {
-    nav: {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100%",
-      zIndex: 1000,
-      padding: "1rem 0",
-      transition: "all 0.3s ease",
-      backgroundColor: scrolled ? "rgba(15, 23, 42, 0.9)" : "transparent",
-    },
-    container: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    logo: {
-      fontSize: "1.5rem",
-      fontWeight: "700",
-      color: "var(--color-primary)",
-      letterSpacing: "1px",
-    },
-    links: {
-      display: "flex",
-      gap: "2rem",
-    },
-    link: {
-      color: "var(--color-text)",
-      fontWeight: "500",
-      transition: "color 0.3s",
-    },
-    menuBtn: {
-      display: "none", // Mobile menu button for later
-    },
-  };
-
   return (
-    <nav style={styles.nav} className={scrolled ? "glass" : ""}>
-      <div className="container" style={styles.container}>
-        <a href="#" style={styles.logo}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 ${
+        scrolled
+          ? "bg-slate-900/90 backdrop-blur-md border-b border-white/10"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-[1200px] mx-auto px-4 flex justify-between items-center">
+        <a href="#" className="text-2xl font-bold text-primary tracking-wide">
           REAL ESTATE
         </a>
-        <ul style={styles.links}>
+        <ul className="flex gap-8">
           <li>
-            <a href="#hero" style={styles.link}>
+            <a
+              href="#hero"
+              className="text-slate-50 font-medium hover:text-primary transition-colors"
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#listings" style={styles.link}>
+            <a
+              href="#listings"
+              className="text-slate-50 font-medium hover:text-primary transition-colors"
+            >
               Listings
             </a>
           </li>
           <li>
-            <a href="#about" style={styles.link}>
+            <a
+              href="#about"
+              className="text-slate-50 font-medium hover:text-primary transition-colors"
+            >
               About
             </a>
           </li>
           <li>
-            <a href="#contact" style={styles.link}>
+            <a
+              href="#contact"
+              className="text-slate-50 font-medium hover:text-primary transition-colors"
+            >
               Contact
             </a>
           </li>

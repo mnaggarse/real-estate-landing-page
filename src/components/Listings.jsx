@@ -33,100 +33,36 @@ export default function Listings() {
     },
   ];
 
-  const styles = {
-    section: {
-      padding: "var(--spacing-xl) 0",
-      backgroundColor: "var(--color-bg)",
-    },
-    header: {
-      textAlign: "center",
-      marginBottom: "var(--spacing-xl)",
-    },
-    title: {
-      fontSize: "2.5rem",
-      marginBottom: "var(--spacing-sm)",
-    },
-    grid: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-      gap: "2rem",
-    },
-    card: {
-      backgroundColor: "var(--color-surface)",
-      borderRadius: "var(--radius-md)",
-      overflow: "hidden",
-      transition: "transform 0.3s ease, box-shadow 0.3s ease",
-      cursor: "pointer",
-    },
-    imageContainer: {
-      height: "300px",
-      overflow: "hidden",
-    },
-    image: {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      transition: "transform 0.5s ease",
-    },
-    details: {
-      padding: "1.5rem",
-    },
-    price: {
-      fontSize: "1.5rem",
-      fontWeight: "700",
-      color: "var(--color-primary)",
-      marginBottom: "0.5rem",
-    },
-    address: {
-      fontSize: "1.1rem",
-      marginBottom: "1rem",
-      color: "#e2e8f0",
-    },
-    features: {
-      display: "flex",
-      gap: "1.5rem",
-      color: "var(--color-text-muted)",
-      fontSize: "0.9rem",
-      borderTop: "1px solid #334155",
-      paddingTop: "1rem",
-    },
-  };
-
   return (
-    <section id="listings" style={styles.section}>
-      <div className="container" style={styles.header}>
-        <h2 style={styles.title}>Featured Properties</h2>
-        <p style={{ color: "var(--color-text-muted)" }}>
+    <section id="listings" className="py-32 bg-slate-900">
+      <div className="max-w-[1200px] mx-auto px-4 text-center mb-16">
+        <h2 className="text-[2.5rem] mb-2 font-bold text-white">
+          Featured Properties
+        </h2>
+        <p className="text-slate-400">
           Hand-picked properties for the discerning buyer.
         </p>
       </div>
 
-      <div className="container" style={styles.grid}>
+      <div className="max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {listings.map((item) => (
           <div
             key={item.id}
-            className="listing-card"
-            style={styles.card}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-10px)";
-              e.currentTarget.style.boxShadow =
-                "0 20px 25px -5px rgba(0, 0, 0, 0.3)";
-              e.currentTarget.querySelector("img").style.transform =
-                "scale(1.1)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "none";
-              e.currentTarget.querySelector("img").style.transform = "scale(1)";
-            }}
+            className="bg-slate-800 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group cursor-pointer"
           >
-            <div style={styles.imageContainer}>
-              <img src={item.image} alt={item.address} style={styles.image} />
+            <div className="h-[300px] overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.address}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
-            <div style={styles.details}>
-              <div style={styles.price}>{item.price}</div>
-              <h3 style={styles.address}>{item.address}</h3>
-              <div style={styles.features}>
+            <div className="p-6">
+              <div className="text-2xl font-bold text-primary mb-2">
+                {item.price}
+              </div>
+              <h3 className="text-lg mb-4 text-slate-200">{item.address}</h3>
+              <div className="flex gap-6 text-slate-400 text-sm border-t border-slate-700 pt-4">
                 <span>{item.beds} Beds</span>
                 <span>{item.baths} Baths</span>
                 <span>{item.sqft} sqft</span>
