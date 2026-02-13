@@ -29,7 +29,7 @@ export default function About() {
 
           <div className="flex gap-12 mt-8">
             <div className="flex flex-col">
-              <span className="text-[2.5rem] font-bold text-primary">
+              <span className="text-4xl font-bold text-primary">
                 15+
               </span>
               <span className="text-slate-400 text-sm uppercase tracking-wider">
@@ -37,7 +37,7 @@ export default function About() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-[2.5rem] font-bold text-primary">
+              <span className="text-4xl font-bold text-primary">
                 $2B+
               </span>
               <span className="text-slate-400 text-sm uppercase tracking-wider">
@@ -45,7 +45,7 @@ export default function About() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-[2.5rem] font-bold text-primary">
+              <span className="text-4xl font-bold text-primary">
                 300+
               </span>
               <span className="text-slate-400 text-sm uppercase tracking-wider">
